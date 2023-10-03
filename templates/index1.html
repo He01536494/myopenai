@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Wikipedia</title>
+</head>
+
+<body>
+    <h1>搜索維基百科</h1>
+    <form action="myapp" method="post">
+        {% csrf_token %}
+        <label for="search_query">輸入搜索查詢:</label>
+        <input type="text" id="search_query" name="search_query" required>
+        <label for="output">建立嵌入檔案:</label>
+        <input type="text" id="output" name="output" required>
+        <button type="submit">搜索</button>
+    </form>
+
+</body>
+
+</html>
